@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC   
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>	
+
+    <package name="usuario" namespace="/" extends="tiles-default">
+    
+        
+        
+        <global-results>
+            <result name="existeUsuario" type="tiles">d_bienvenida</result>
+            <result name="loginUsuario" type="tiles">d_ingreso</result>
+            <result name="logoutUsuario" type="tiles">d_ingreso</result>
+            <result name="mantenUsuario" type="tiles">d_manten</result>
+            
+        </global-results>
+        
+    	<action name="ingresarSistema"
+				class="com.cibertec.dawi.proy.actions.ActionUsuario"
+				method="validarUsuario">
+    	</action>
+    	
+    	<action name="logout"
+				class="com.cibertec.dawi.proy.actions.ActionUsuario"
+				method="logout">
+    	</action>
+    	
+    </package>
+
+</struts>
